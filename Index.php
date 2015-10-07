@@ -38,15 +38,16 @@ class Index
     public static function pruebaRectangulo()
     {
         $r = new Rectangulo(new Punto(4,0), 20, 30);
+
         $r1 = new Rectangulo(new Punto(0,0), 20, 40);
         echo $r->distancia($r1);
     }
 
     public static function pruebaTriangulo()
     {
-        $base = new Triangulo(new Punto(4,0), 20, 30);
-        $altura = new Rectangulo(new Punto(0,0), 20, 40);
-        echo $r->distancia($r1);
+        $base = new Triangulo(new Punto(4,0),10,15);
+        $altura = new Triangulo(new Punto(1,0),50,60);
+
     }
 }
 
