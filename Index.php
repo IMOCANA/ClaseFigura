@@ -17,11 +17,11 @@ class Index
 
     public static function pruebaPunto()
     {
-        $p = new Punto(3,4);
+        $p = new Punto(2,6);
         echo $p . '<br />';
-        $p->desplazar(10,10);
+        $p->desplazar(20,20);
         echo $p . '<br />';
-        $p1 = new Punto(2,2);
+        $p1 = new Punto(1,1);
         echo 'Distancia: ' . $p->distancia($p1);
         echo 'Distancia: ' . Punto::distancia2($p, $p1);
     }
@@ -29,19 +29,32 @@ class Index
     {
         echo '<p>' . Figura::getNumFiguras() . '</p>';
         $origen = new Punto(0,0);
-        $c = new Circulo($origen, 3);
+        $c = new Circulo($origen, 5);
         echo $c;
-        $c->desplazar(10,10);
+        $c->desplazar(20,20);
         echo $c;
         echo '<p>' . Figura::getNumFiguras() . '</p>';
     }
     public static function pruebaRectangulo()
     {
-        $r = new Rectangulo(new Punto(3,0), 10, 20);
-        $r1 = new Rectangulo(new Punto(0,0), 10, 20);
+        $r = new Rectangulo(new Punto(4,0), 20, 30);
+        $r1 = new Rectangulo(new Punto(0,0), 20, 40);
+        echo $r->distancia($r1);
+    }
+
+    public static function pruebaTriangulo()
+    {
+        $base = new Triangulo(new Punto(4,0), 20, 30);
+        $altura = new Rectangulo(new Punto(0,0), 20, 40);
         echo $r->distancia($r1);
     }
 }
 
+Index::pruebaCirculo();
 Index::pruebaPunto();
+Index::pruebaRectangulo();
+Index::pruebaTriangulo();
+Index::pruebaCuadrado();
+
+
 
